@@ -2,17 +2,16 @@ Scoped Component Overrides
 ===
 A linter for scss-lint (https://github.com/brigade/scss-lint). Warns on root-level selectors that are not native to a component. Example, in the component myComponent.scss
 
-    // good
+    // good : overrides to myOtherComponent are limited to myComponent
     .myComponent {
-        
-        // overrides to myOtherComponent are limited to myComponent
+       
         .myOtherComponent-element {
             
         }
 
     }
 
-    // overrides to myOtherComponent are global 
+    // bad : overrides to myOtherComponent are global
     .myOtherComponent-element {
         ... 
     }
